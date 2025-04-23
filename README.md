@@ -114,7 +114,5 @@ END;
 ![image](https://github.com/user-attachments/assets/738eba23-56f5-4edb-94dd-95b7688d1ae5)
 ![image](https://github.com/user-attachments/assets/320d218b-9cd9-45b5-8706-e52a8168bc18)
 ![image](https://github.com/user-attachments/assets/23956d7e-10d7-418e-8379-5f851d10e5d7)
-
-
-
+####Trigger trong cơ sở dữ liệu của quán trà sữa đã đóng vai trò rất quan trọng trong việc đảm bảo tính toàn vẹn dữ liệu, tự động hóa xử lý nghiệp vụ, và hạn chế sai sót do người dùng.
 
