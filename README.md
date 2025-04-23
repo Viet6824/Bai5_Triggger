@@ -100,9 +100,7 @@ BEGIN
         WHERE LEN(Sdt) != 10 OR ISNUMERIC(Sdt) = 0
     )
     BEGIN
-        -- Chỉ cần RAISERROR là đủ
         RAISERROR(N'Số điện thoại phải có đúng 10 chữ số và là số!', 16, 1);
-        -- Không cần ROLLBACK TRANSACTION
     END
 END;
 
