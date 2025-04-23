@@ -88,7 +88,23 @@ BEGIN
         SELECT MaDH FROM deleted
     );
 END;
-GO
+-- Trigger cảnh báo sdt k đủ 10 số
+CREATE TRIGGER TR_Check_SDT_KhachHang
+ON KhachHang
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM inserted
+        WHERE LEN(Sdt) != 10 OR ISNUMERIC(Sdt) = 0
+    )
+    BEGIN
+        RAISERROR(N'Số điện thoại phải có đúng 10 chữ số và là số!', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
+
 ```
 ####Test Trigger
 ![image](https://github.com/user-attachments/assets/b61a0866-7755-4661-b202-db16452d5870)
@@ -96,4 +112,7 @@ GO
 ![image](https://github.com/user-attachments/assets/a54beeca-3aba-48f3-9a66-28393859d7cd)
 ![image](https://github.com/user-attachments/assets/738eba23-56f5-4edb-94dd-95b7688d1ae5)
 ![image](https://github.com/user-attachments/assets/320d218b-9cd9-45b5-8706-e52a8168bc18)
+![image](https://github.com/user-attachments/assets/16f62bce-4daa-436c-8752-8698abf0f45b)
+
+
 
