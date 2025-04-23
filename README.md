@@ -1,5 +1,5 @@
 # Bai5_Triggger
-# Bài tập 5 của Nguyễn Trung Hiếu - K225480106019 - Lớp K58KTP - MÔN HQT CSDL
+# Bài tập 5 của Nguyễn Đức Việt - K225480106075 - Lớp K58KTP - MÔN HQT CSDL
 ## Nội dung bài tập 5:
 1. Dựa trên cơ sở là csdl của Đồ án
 2. Tìm cách bổ xung thêm 1 (hoặc vài) trường phi chuẩn
