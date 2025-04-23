@@ -100,8 +100,9 @@ BEGIN
         WHERE LEN(Sdt) != 10 OR ISNUMERIC(Sdt) = 0
     )
     BEGIN
+        -- Chỉ cần RAISERROR là đủ
         RAISERROR(N'Số điện thoại phải có đúng 10 chữ số và là số!', 16, 1);
-        ROLLBACK TRANSACTION;
+        -- Không cần ROLLBACK TRANSACTION
     END
 END;
 
@@ -112,7 +113,8 @@ END;
 ![image](https://github.com/user-attachments/assets/a54beeca-3aba-48f3-9a66-28393859d7cd)
 ![image](https://github.com/user-attachments/assets/738eba23-56f5-4edb-94dd-95b7688d1ae5)
 ![image](https://github.com/user-attachments/assets/320d218b-9cd9-45b5-8706-e52a8168bc18)
-![image](https://github.com/user-attachments/assets/16f62bce-4daa-436c-8752-8698abf0f45b)
+![image](https://github.com/user-attachments/assets/23956d7e-10d7-418e-8379-5f851d10e5d7)
+
 
 
 
